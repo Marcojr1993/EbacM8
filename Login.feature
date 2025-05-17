@@ -2,16 +2,15 @@
 
 Funcionalidade: Autenticação de usuário na plataforma EBAC-SHOP
 Como cliente da EBAC-SHOP
-Quero fazer o login (autenticação) na plataforma  
-Para visualizar meus pedidos
+O usuário deseja fazer o login (autenticação) na plataforma  
+Para visualizar seus pedidos
 
+Cenário: Login bem-sucedido com dados válidos
+    Dado que o usuário está na página de login
+    Quando o usuário insere um nome de usuário e senha válidos
+    Então o sistema deve direcioná-lo para a tela de checkout
 
-  Cenário: Login bem-sucedido com dados válidos
-    Dado que estou na página de login
-    Quando insiro um nome de usuário e senha válidos
-    Então devo ser direcionado para a tela de checkout
-
-  Cenário: Login falha com credenciais inválidas
-    Dado que estou na página de login
-    Quando insiro um nome de usuário ou senha inválidos
-    Então devo ver uma mensagem de alerta informando "Usuário ou senha inválidos"
+Cenário: Login falha com credenciais inválidas
+    Dado que o usuário está na página de login
+    Quando o usuário insere um nome de usuário ou senha inválidos
+    Então o sistema deve exibir uma mensagem de alerta informando "Usuário ou senha inválidos"
